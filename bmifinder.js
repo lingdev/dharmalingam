@@ -13,14 +13,13 @@ app.post("/", function(req, res){
     "WeightKg": 62}, {"Gender": "Female", "HeightCm": 150, "WeightKg": 70}, {"Gender": "Female",
     "HeightCm": 167, "WeightKg": 82} ];
     var allPerson=[];
-    var overWeightPerson="0";
+    var overWeightPerson=0;
     var owPerson=[];
     
     // req_name = req.body.Gender;
   
     persons.map((person)=>{
         
-        // console.log(person.HeightCm,"dddddddddddddd")
     
         var result = (person.WeightKg / (person.HeightCm*person.HeightCm))*10000;
         // console.log(result,"iiiii");
